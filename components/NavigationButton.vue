@@ -2,8 +2,8 @@
 <template>
   <!-- @clickには、押下時のイベントを設定することができます。下記ではmethodsのonClickLInkが呼び出されます。 -->
   <div class="btn btn-gradient wrap" @click="onClickLink" >
-    <!-- template内でコロンは特別な意味を持ちます。v-bindの省略形として、関数の戻り値や変数の中身を呼び出すことができます。 -->
-    <img :src="icon" width="30" height="40" />
+    <!-- タグ内でのコロンは特別な意味を持ちます。v-bindの省略形として、関数の戻り値や変数の中身を呼び出すことができます。 -->
+    <img :src="icon" width="25" height="30" />
     <!-- {{}} ←こちらはマスタッシュと呼ばれ、変数や関数の戻り値を直接表示することができます。 -->
     <p>{{ buttonName }}</p>
   </div>
