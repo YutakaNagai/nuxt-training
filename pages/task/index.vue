@@ -9,6 +9,9 @@
         <li>
           <a href="task/task01">トップメニューにContentsを表示させてみよう！</a>
         </li>
+        <li>
+          <a href="task/task02">layoutsを変更してみよう！</a>
+        </li>
       </ul>
     </div>
   </div>
