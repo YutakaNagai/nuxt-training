@@ -18,6 +18,9 @@ export default {
 }
 </script>
 <style scoped>
+h1 {
+  background-color:palegreen;
+}
 div.content {
   clear: left;
 }

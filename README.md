@@ -5,6 +5,6 @@
 
 ```
 $ git clone https://github.com/YutakaNagai/sample_app.git
-$ npm install
+$ npm ci
 $ npm run dev
 ```
