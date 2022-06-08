@@ -52,9 +52,11 @@ h1 {
 h2 {
   background-color: antiquewhite;
 }
+/* 奇数クラス */
 .odd {
   background-color: white;
 }
+/* 偶数クラス */
 .even {
   background-color: gainsboro;
 }
