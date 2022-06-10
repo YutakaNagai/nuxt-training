@@ -22,6 +22,9 @@
 </template>
 <script>
 export default {
+  layout () {
+    return 'default_blue'
+  }
 }
 </script>
 <style scoped>
