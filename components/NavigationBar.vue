@@ -6,6 +6,7 @@
     <navigation-button :href="github.url" :button-name="github.name" :icon="github.icon" :new-tab="github.newTab" />
     <navigation-button :href="work.url" :button-name="work.name" :icon="work.icon" :new-tab="work.newTab" />
     <navigation-button :href="task.url" :button-name="task.name" :icon="task.icon" :new-tab="task.newTab" />
+    <navigation-button :href="contents.url" :button-name="contents.name" :icon="contents.icon" :new-tab="contents.newTab" />
   </div>
 </template>
 <script>
@@ -44,6 +45,12 @@ export default {
         icon: '/work.png',
         newTab: false,
       },
+      contents: {
+        url: '/contents',
+        name: 'Contents',
+        icon: '/contents.png',
+        newTab: false,
+      }
     }
   }
 }
