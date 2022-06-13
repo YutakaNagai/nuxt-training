@@ -17,6 +17,9 @@
         <li class="odd">
           <a :href="`task/task${tasks[2].articleNum}`">{{ tasks[2].title }}</a>
         </li>
+        <li class="even">
+          <a :href="`task/task${tasks[3].articleNum}`">{{ tasks[3].title }}</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -37,6 +40,10 @@ export default {
         {
           articleNum: '03',
           title: '繰り返しと条件分岐を試してみよう！'
+        },
+        {
+          articleNum: '04',
+          title: '部品をコンポーネント化しよう！'
         },
       ],
     }

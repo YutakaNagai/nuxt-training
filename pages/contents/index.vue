@@ -5,9 +5,9 @@
       <p>各種コンテンツのページです。</p>
     </div>
     <div>
-      <ul>
+      <ul v-for="content in contents" :key="`content-${content.name}`">
         <li>
-          hoge
+          <a :href="`contents/${content.contentName}`">{{ content.title }}</a>
         </li>
       </ul>
     </div>
@@ -15,6 +15,16 @@
 </template>
 <script>
 export default {
+  data() {
+    return {
+      contents: [
+        {
+          contentName: 'hoge',
+          title: 'hoge'
+        }
+      ],
+    }
+  }
 }
 </script>
 <style scoped>
