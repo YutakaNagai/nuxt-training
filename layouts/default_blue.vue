@@ -22,7 +22,7 @@ export default {
 </script>
 <style scoped>
 h1 {
-  background-color:palegreen;
+  background-color:skyblue;
 }
 div.content {
   clear: left;
