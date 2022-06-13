@@ -20,6 +20,9 @@
         <li class="even">
           <a :href="`task/task${tasks[3].articleNum}`">{{ tasks[3].title }}</a>
         </li>
+        <li class="odd">
+          <a :href="`task/task${tasks[4].articleNum}`">{{ tasks[4].title }}</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -44,6 +47,10 @@ export default {
         {
           articleNum: '04',
           title: '部品をコンポーネント化しよう！'
+        },
+        {
+          articleNum: '05',
+          title: 'Mixinを使ってみよう！'
         },
       ],
     }

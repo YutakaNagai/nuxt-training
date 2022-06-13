@@ -19,8 +19,8 @@ export default {
     return {
       contents: [
         {
-          contentName: 'hoge',
-          title: 'hoge'
+          contentName: 'calculator',
+          title: 'けいさん'
         }
       ],
     }
