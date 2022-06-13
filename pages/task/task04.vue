@@ -35,30 +35,32 @@
                 <td>階層</td>
               </tr>
             </thead>
-            <tr>
-              <td>Home</td>
-              <td>パンくずリストなし</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>Task</td>
-              <td>Home > Task</td>
-              <td>Home</td>
-              <td>2</td>
-            </tr>
-            <tr>
-              <td>Contents</td>
-              <td>Home > Contents</td>
-              <td>Home</td>
-              <td>2</td>
-            </tr>
-            <tr>
-              <td>Task〇〇（〇〇には01, 02などが入ります）</td>
-              <td>Home > Task > Task〇〇</td>
-              <td>Home, Task</td>
-              <td>3</td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>Home</td>
+                <td>パンくずリストなし</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>Task</td>
+                <td>Home > Task</td>
+                <td>Home</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Contents</td>
+                <td>Home > Contents</td>
+                <td>Home</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Task〇〇（〇〇には01, 02などが入ります）</td>
+                <td>Home > Task > Task〇〇</td>
+                <td>Home, Task</td>
+                <td>3</td>
+              </tr>
+            </tbody>
           </table>
         </li>
         <li>
