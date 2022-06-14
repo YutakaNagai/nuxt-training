@@ -8,14 +8,8 @@
     <div>
       <!-- 課題リスト -->
       <ul>
-        <li class="odd">
-          <a :href="`task/task${tasks[0].articleNum}`">{{ tasks[0].title }}</a>
-        </li>
-        <li class="even">
-          <a :href="`task/task${tasks[1].articleNum}`">{{ tasks[1].title }}</a>
-        </li>
-        <li class="odd">
-          <a :href="`task/task${tasks[2].articleNum}`">{{ tasks[2].title }}</a>
+        <li v-for="task in tasks" :key="task.articleNum" :class="task.articleNum % 2 === 0 ? evenClass : oddClass">
+          <a :href="`task/task${task.articleNum}`">{{ task.title }}</a>
         </li>
       </ul>
     </div>
@@ -39,6 +33,8 @@ export default {
           title: '繰り返しと条件分岐を試してみよう！'
         },
       ],
+      oddClass: 'odd',
+      evenClass: 'even'
     }
   },
   methods: {
