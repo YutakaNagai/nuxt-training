@@ -1,6 +1,9 @@
 <template>
   <div>
     <div>
+      <BreadCrumbList :breadCrumbList="breadCrumbList" />
+    </div>
+    <div>
       <h1>Task</h1>
       <h2>layoutsを変更してみよう！</h2>
     </div>
@@ -69,6 +72,36 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  // dataでreturnした変数はtemplate内で呼び出すことができるようになります。
+  data() {
+    // パンくずリストの初期化
+    const breadCrumbList = []
+    return {
+      // createdで代入したパンくずリスト
+      breadCrumbList,
+    }
+  },
+  // createdに記載することで、DOMの作成前にデータを定義することができます。
+  created() {
+    // こちらで代入することで、dataで定義したbreadCrumbListを上書きする
+    this.breadCrumbList = [
+      {
+        title: 'Home',
+        url: '/',
+      },
+      {
+        title: 'Task',
+        url: '/task',
+      },
+      {
+        title: 'Task02',
+      },
+    ]
+  }
+}
+</script>
 <style>
 h1 {
   background-color:palegreen;

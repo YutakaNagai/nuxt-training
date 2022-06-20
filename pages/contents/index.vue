@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div>
+      <BreadCrumbList :breadCrumbList="breadCrumbList" />
+    </div>
     <h1>Contents</h1>
     <div>
       <p>各種コンテンツのページです。</p>
@@ -16,6 +19,8 @@
 <script>
 export default {
   data() {
+    // パンくずリストの初期化
+    const breadCrumbList = []
     return {
       contents: [
         {
@@ -23,7 +28,23 @@ export default {
           title: 'けいさん'
         }
       ],
+      // createdで代入したパンくずリスト
+      breadCrumbList
     }
+  },
+  // createdに記載することで、DOMの作成前にデータを定義することができます。
+  created() {
+    // こちらで代入することで、dataで定義したbreadCrumbListを上書きする
+    this.breadCrumbList = [
+      {
+        title: 'Home',
+        url: '/',
+      },
+      {
+        title: 'Contents',
+        url: '/contents',
+      }
+    ]
   }
 }
 </script>

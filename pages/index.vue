@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div>
+      <BreadCrumbList :breadCrumbList="breadCrumbList" />
+    </div>
     <h1>Home</h1>
     <div>
       <h2>概要</h2>
@@ -24,6 +27,25 @@
 export default {
   layout () {
     return 'default_blue'
+  },
+  // dataでreturnした変数はtemplate内で呼び出すことができるようになります。
+  data() {
+    // パンくずリストの初期化
+    const breadCrumbList = []
+    return {
+      // createdで代入したパンくずリスト
+      breadCrumbList,
+    }
+  },
+  // createdに記載することで、DOMの作成前にデータを定義することができます。
+  created() {
+    // こちらで代入することで、dataで定義したbreadCrumbListを上書きする
+    this.breadCrumbList = [
+      {
+        title: 'Home',
+        url: '/'
+      }
+    ]
   }
 }
 </script>
