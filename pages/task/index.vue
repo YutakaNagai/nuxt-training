@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div>
+      <BreadCrumbList :breadCrumbList="breadCrumbList" />
+    </div>
     <h1>Task</h1>
     <div>
       <h2>課題リストです。</h2>
@@ -24,6 +27,8 @@
 <script>
 export default {
   data() {
+    // パンくずリストの初期化
+    const breadCrumbList = []
     return {
       tasks: [
         {
@@ -48,8 +53,23 @@ export default {
         },
       ],
       oddClass: 'odd',
-      evenClass: 'even'
+      evenClass: 'even',
+      // createdで代入したパンくずリスト
+      breadCrumbList
     }
+  },
+  // createdに記載することで、DOMの作成前にデータを定義することができます。
+  created() {
+    // こちらで代入することで、dataで定義したbreadCrumbListを上書きする
+    this.breadCrumbList = [
+      {
+        title: 'Home',
+        url: '/',
+      },
+      {
+        title: 'Task'
+      }
+    ]
   },
   methods: {
   },
@@ -57,15 +77,18 @@ export default {
 </script>
 <style scoped>
 h1 {
-  background-color:palegreen;
+  background-color: palegreen;
 }
+
 h2 {
   background-color: antiquewhite;
 }
+
 /* 奇数クラス */
 .odd {
   background-color: white;
 }
+
 /* 偶数クラス */
 .even {
   background-color: gainsboro;

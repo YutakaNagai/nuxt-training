@@ -1,11 +1,7 @@
 <template>
   <div>
     <div>
-      <!-- パンくずリスト -->
-      <!-- エラー落ちを防ぐため、事前にURLとタイトルの存在をチェック -->
-      <span><a v-if="breadCrumbList[0].url && breadCrumbList[0].title" :href="breadCrumbList[0].url">{{ breadCrumbList[0].title }}</a> &gt; </span>
-      <span><a v-if="breadCrumbList[1].url && breadCrumbList[1].title" :href="breadCrumbList[1].url">{{ breadCrumbList[1].title }}</a> &gt; </span>
-      <span v-if="breadCrumbList[2].title">{{ breadCrumbList[2].title }}</span>
+      <BreadCrumbList :breadCrumbList="breadCrumbList" />
     </div>
     <div>
       <h1>Task</h1>

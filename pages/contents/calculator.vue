@@ -8,6 +8,7 @@
       <calc-mul />
       <calc-div />
       <calc-mod />
+      <calc-concat />
     </div>
   </div>
 </template>
@@ -17,6 +18,7 @@ import CalcSub from "~/components/CalcSub.vue"
 import CalcMul from "~/components/CalcMul.vue"
 import CalcDiv from "~/components/CalcDiv.vue"
 import CalcMod from "~/components/CalcMod.vue"
+import CalcConcat from "~/components/CalcConcat.vue"
 
 export default {
   components:{
@@ -25,6 +27,7 @@ export default {
     CalcMul,
     CalcDiv,
     CalcMod,
+    CalcConcat
   },
 }
 </script>
