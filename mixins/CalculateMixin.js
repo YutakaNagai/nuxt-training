@@ -22,6 +22,10 @@ export default {
       mod2: '',
       mod3: '',
       mod4: '',
+      str1: '',
+      str2: '',
+      str3: '',
+      str4: '',
     }
   },
   computed: {
@@ -40,10 +44,13 @@ export default {
     modCp() {
       return this.mod1 % this.mod2
     },
+    conCP() {
+      return this.str1 + this.str2
+    }
   },
   methods: {
     calc: (calcType, item1, item2) => {
-      switch(calcType) {
+      switch (calcType) {
         case 'add':
           return item1 + item2
         case 'sub':
@@ -54,6 +61,8 @@ export default {
           return item1 / item2
         case 'mod':
           return item1 % item2;
+        case 'con':
+          return item1 + item2
         default:
           return null
       }
